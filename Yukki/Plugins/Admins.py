@@ -265,7 +265,7 @@ async def admins(_, message: Message):
                         channel
                     ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} İndiriliyor 📥**\n\n**Başlık:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"⚡"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
