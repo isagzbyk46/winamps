@@ -65,7 +65,7 @@ async def play(_, message: Message):
                 "**Kullanım:**\n\n/bul [Youtube Url'si veya Müzik Adı]\n\nBelirli Sorguyu Karşıdan Yükler."
             )
             return
-        mystic = await message.reply_text("🔍 Sorgunuz Aranıyor...")
+        mystic = await message.reply_text("🔍")
         query = message.text.split(None, 1)[1]
         (
             title,
