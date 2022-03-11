@@ -41,7 +41,7 @@ loop = asyncio.get_event_loop()
 
 
 @app.on_message(
-    filters.command(["play", f"play@{BOT_USERNAME}"]) & filters.group
+    filters.command(["oynat", f"play@{BOT_USERNAME}"]) & filters.group
 )
 @checker
 @logging
@@ -189,7 +189,7 @@ async def oynat(_, message: Message):
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
             return
-        mystic = await message.reply_text("🔍 **Senin İçin Arıyorum**...")
+        mystic = await message.reply_text("🔍")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -256,7 +256,7 @@ async def Music_Stream(_, CallbackQuery):
         )
     await CallbackQuery.answer(f"İşleniyor: {title[:20]}", show_alert=True)
     mystic = await CallbackQuery.message.reply_text(
-        f"**{MUSIC_BOT_NAME} İndiriyor 📥**\n\n**Başlık:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+        f"⚡"
     )
     downloaded_file = await loop.run_in_executor(
         None, download, videoid, mystic, title
