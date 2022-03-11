@@ -277,7 +277,7 @@ async def admin_risghts(_, CallbackQuery):
                         channel
                     ) = get_yt_info_id(videoid)
                     await mystic.edit(
-                        f"**{MUSIC_BOT_NAME} İndiriyor 📥**\n\n**Başlık:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                        f"⚡"
                     )
                     downloaded_file = await loop.run_in_executor(
                         None, download, videoid, mystic, title
@@ -416,7 +416,7 @@ async def play_playlist(_, CallbackQuery):
                         channel
                     ) = get_yt_info_id(videoid)
                 mystic = await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} İndiriyor 📥**\n\n**Başlık:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"⚡"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -608,10 +608,10 @@ async def del_playlist(_, CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     type, genre = callback_request.split("|")
-    if str(type) == "Personal":
+    if str(type) == "kişi":
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
-    elif str(type) == "Group":
+    elif str(type) == "Grup":
         a = await app.get_chat_member(
             CallbackQuery.message.chat.id, CallbackQuery.from_user.id
         )
