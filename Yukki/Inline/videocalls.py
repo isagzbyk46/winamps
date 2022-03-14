@@ -6,17 +6,17 @@ def choose_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎵 Müzik Çal",
+                text="♫ Dinle",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥 Video İzle",
+                text="🎬 İzle",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="👉 Kapat",
+                text="Kapat 🗑",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
@@ -28,11 +28,11 @@ def livestream_markup(quality, videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎥  Canlı Başlat",
+                text="🎬 Yayını Başlat",
                 callback_data=f"LiveStream {quality}|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="👉 Kapat",
+                text="Kapat 🗑",
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
@@ -44,25 +44,25 @@ def stream_quality_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="📽 360P",
+                text="📽 480P",
                 callback_data=f"VideoStream 360|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="📽 720P",
+                text="📽 1080P",
                 callback_data=f"VideoStream 720|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="📽 480P",
+                text="📽 720P",
                 callback_data=f"VideoStream 480|{videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🔙 Geri Git",
+                text="↙ Geri Git",
                 callback_data=f"gback_list_chose_stream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="👉 Kapat",
+                text="Kapat 🗑",
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
