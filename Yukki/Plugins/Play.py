@@ -41,7 +41,7 @@ loop = asyncio.get_event_loop()
 
 
 @app.on_message(
-    filters.command(["oynat", f"play@{BOT_USERNAME}"]) & filters.group
+    filters.command(["oynat", f"oynat@{BOT_USERNAME}"]) & filters.group
 )
 @checker
 @logging
@@ -68,7 +68,7 @@ async def oynat(_, message: Message):
     url = get_url(message)
     if audio:
         mystic = await message.reply_text(
-            "🔄 Ses İşleniyor... Lütfen bekleyin!"
+            "🔎"
         )
         try:
             read = db_mem[message.chat.id]["live_check"]
@@ -129,7 +129,7 @@ async def oynat(_, message: Message):
                     "Pardon! Bot, CPU aşırı yükleme sorunları nedeniyle yalnızca sınırlı sayıda görüntülü aramaya izin verir. Diğer birçok sohbet şu anda görüntülü arama kullanıyor. Sese geçmeyi deneyin veya daha sonra yeniden deneyin"
                 )
         mystic = await message.reply_text(
-            "🔄 Video İşleniyor... Lütfen bekleyin!"
+            "🔎"
         )
         try:
             read = db_mem[message.chat.id]["live_check"]
@@ -155,7 +155,7 @@ async def oynat(_, message: Message):
         if "resso.com" in url:            
             return await message.reply_text("Kullanmak /resso yeniden gövde bağlantıları için")
 
-        mystic = await message.reply_text("🔄 URL işleniyor... Lütfen bekleyin!")
+        mystic = await message.reply_text("🔎")
         if not message.reply_to_message:
             query = message.text.split(None, 1)[1]
         else:
