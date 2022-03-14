@@ -187,7 +187,7 @@ def secondary_markup2(videoid, user_id):
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [
             InlineKeyboardButton(text="Kapat 🗑", callback_data=f"close"),
@@ -211,7 +211,7 @@ def primary_markup(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [
             InlineKeyboardButton(
@@ -235,7 +235,7 @@ def timer_markup(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [
             InlineKeyboardButton(
@@ -262,7 +262,7 @@ def audio_markup(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton(text="Kapat 🗑", callback_data=f"close")],
     ]
@@ -281,7 +281,7 @@ def audio_timer_markup_start(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton(text="Kapat 🗑", callback_data=f"close")],
     ]
@@ -294,7 +294,7 @@ audio_markup2 = InlineKeyboardMarkup(
             InlineKeyboardButton(text="▷", callback_data=f"resumecb"),
             InlineKeyboardButton(text="Ⅱ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="➩", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopcb"),
+            InlineKeyboardButton(text="▣", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton("Kapat 🗑", callback_data="close")],
     ]
